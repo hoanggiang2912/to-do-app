@@ -1,0 +1,215 @@
+// text respon: clamp();
+// parameters: rem (1rem = 10px);
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Space+Mono&display=swap');
+
+
+// || display text start
+    .display-large {
+        font-size: clamp(4.4rem, 3.471rem + 2.476vw, 5.7rem);
+        font-weight: 400;
+        line-height: clamp(5.2rem, 4.343rem + 2.286vw, 6.4rem);
+    }
+    .display-medium {
+        font-size: clamp(3.8rem, 3.3rem + 1.333vw, 4.5rem);
+        font-weight: 400;
+        line-height: clamp(4.5rem, 4rem + 1.333vw, 5.2rem);
+    }
+    .display-small {
+        font-size: clamp(2.8rem, 2.229rem + 1.524vw, 3.6rem);
+        font-weight: 400;
+        line-height: clamp(3.6rem, 3.029rem + 1.524vw, 4.4rem);
+    }
+// || display text end
+
+// || headline text start
+    .headline-large {
+        font-size: clamp(2.4rem, 1.829rem + 1.524vw, 3.2rem);
+        font-weight: 400;
+        line-height: clamp(3.2rem, 2.629rem + 1.524vw, 4rem);
+    }
+    .headline-medium {
+        font-size: clamp(2rem, 1.429rem + 1.524vw, 2.8rem);
+        font-weight: 400;
+        line-height: clamp(2.8rem, 2.229rem + 1.524vw, 3.6rem);
+    }
+    .headline-small {
+        font-size: clamp(1.6rem, 1.029rem + 1.524vw, 2.4rem);
+        font-weight: 400;
+        line-height: clamp(2.4rem, 1.829rem + 1.524vw, 3.2rem);
+    }
+// || headline text end
+
+// || title text start
+    .title-large {
+        font-size: clamp(1.6rem, 1.171rem + 1.143vw, 2.2rem);
+        font-weight: 400;
+        line-height: clamp(2.2rem, 1.771rem + 1.143vw, 2.8rem);
+    }
+    .title-medium{
+        font-size: clamp(1.2rem, 0.914rem + 0.762vw, 1.6rem);
+        font-weight: 500;
+        line-height: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+    }
+    .title-small {
+        font-size: clamp(1rem, 0.714rem + 0.762vw, 1.4rem);
+        font-weight: 500;
+        line-height: clamp(1.4rem, 0.971rem + 1.143vw, 2rem);
+    }
+// || title text end
+
+// || body text start
+    .body-large {
+        font-size: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+        font-weight: 400;
+        line-height: clamp(2.2rem, 2.057rem + 0.381vw, 2.4rem);
+    }
+    .body-medium{
+        font-size: clamp(1.2rem, 1.057rem + 0.381vw, 1.4rem);
+        font-weight: 400;
+        line-height: clamp(1.8rem, 1.657rem + 0.381vw, 2rem);
+    }
+    .body-small {
+        font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
+        font-weight: 400;
+        line-height: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    }
+// || body text end
+
+// || label text start
+    .label-large-prominent {
+        font-size: clamp(1.2rem, 1.057rem + 0.381vw, 1.4rem);
+        font-weight: 600;
+        line-height: clamp(1.8rem, 1.657rem + 0.381vw, 2rem);
+    }
+    .label-large {
+        font-size: clamp(1.2rem, 1.057rem + 0.381vw, 1.4rem);
+        font-weight: 500;
+        line-height: clamp(1.8rem, 1.657rem + 0.381vw, 2rem);
+    }
+    .label-medium-prominent {
+        font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
+        font-weight: 600;
+        line-height: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    }
+    .label-medium {
+        font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
+        font-weight: 500;
+        line-height: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    }
+    .label-small {
+        font-size: clamp(0.8rem, 0.586rem + 0.571vw, 1.1rem);
+        font-weight: 400;
+        line-height: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    }
+// || label text end
+
+// || common text style classes start
+.fw-light {
+    font-weight: 300 !important;
+}
+
+.fw-normal {
+    font-weight: normal !important;
+}
+
+.fw-smb {
+    font-weight: 600 !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.fw-exbold {
+    font-weight: 800 !important;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+.ttu {
+    text-transform: uppercase !important;
+}
+
+.ttc {
+    text-transform: capitalize;
+}
+
+.text-68 {
+    font-size: clamp(2.4rem, -0.743rem + 8.381vw, 6.8rem);
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 900;
+    line-height: clamp(3.6rem, 0.457rem + 8.381vw, 8rem);
+    letter-spacing: -1.25px;
+    color: var(--m-3-sys-light-on-secondary-container, #1D192B);
+}
+
+.text-46 {
+    color: var(--m-3-sys-light-on-secondary-container, #1D192B);
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(2.4rem, 0.829rem + 4.19vw, 4.6rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(3rem, 1.429rem + 4.19vw, 5.2rem);
+}
+.text-38 {
+    // color: var(--m-3-sys-light-on-secondary-container, #1D192B);
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(1.6rem, 0.029rem + 4.19vw, 3.8rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: clamp(3rem, 1.429rem + 4.19vw, 5.2rem);
+} 
+
+.primary-masking-text {
+    background: -webkit-linear-gradient(60deg, #ff79ea, #A93CFF, #6791FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Exo 2', sans-serif;
+    // font-size: clamp(2.4rem, -0.743rem + 8.381vw, 6.8rem);
+    font-style: normal;
+    font-weight: 700;
+    // line-height: clamp(3.6rem, 0.457rem + 8.381vw, 8rem);
+    letter-spacing: -0.25px;
+    text-transform: uppercase;
+}
+
+.alert-text {
+    color: $light-error;
+}
+
+.error60 {
+    color: $error60 !important;
+}
+
+.success-text {
+    color: $-green;
+}
+
+.pending-text {
+    color: $-blue;
+}
+
+.primary-text {
+    color: $light-primary !important;
+}
+
+// || common text style classes end

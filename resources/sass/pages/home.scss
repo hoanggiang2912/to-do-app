@@ -1,0 +1,39 @@
+.title {
+    color: $neutral40;
+}
+.new-task {
+    border: none;
+    margin-top: 16px;
+}
+.add-btn,.clear-btn {
+    color: $neutral40;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    &:hover {
+        background: $neutral94;
+    }
+}
+.task-item {
+    background: $neutral90;
+    color: $neutral30;
+    margin-top: 12px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    &:hover {
+        background: $neutral80;
+    }
+}
+.dragging {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    transform: scale(1.05);
+}

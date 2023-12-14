@@ -1,0 +1,20 @@
+
+@mixin grid ($max-width , $max-height , $min-width , $min-height) {
+    grid-template-columns: repeat(auto-fit , minmax($min-width , $max-width));
+    grid-template-rows: repeat(auto-fit , minmax($min-height , $max-height));
+}
+@mixin animation($animation-name, $duration, $timing-function, $delay, $iteration-count, $direction, $fill-mode) {
+    animation: $animation-name $duration $timing-function $delay $iteration-count $direction $fill-mode;
+    -webkit-animation: $animation-name $duration $timing-function $delay $iteration-count $direction $fill-mode;
+    -moz-animation: $animation-name $duration $timing-function $delay $iteration-count $direction $fill-mode;
+    -o-animation: $animation-name $duration $timing-function $delay $iteration-count $direction $fill-mode;
+}
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+@mixin grid-layout($num-columns, $min-width) {
+    grid-template-columns: repeat(auto-fit, minmax(min(#{$min-width}, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr));
+}

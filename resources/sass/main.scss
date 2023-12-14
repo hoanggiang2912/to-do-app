@@ -1,0 +1,942 @@
+// || import partials start
+    // import abstracts
+    @import 'abstracts/variables';
+    @import 'abstracts/mixins';
+    @import 'abstracts/functions';
+    // theme
+    
+    // import base
+    @import 'base/reset.scss';
+    @import 'base/typography.scss';
+    @import 'base/grid.scss';
+
+    // import components
+    
+    // import theme
+    
+    // import layout
+    
+    // import pages 
+    @import 'pages/home.scss';
+
+// import partials end
+
+// || Responsive 
+/* Mobile: with < 740px */
+@media only screen and (max-width: 46.1875em){
+    .mobile {
+        display: block !important;
+    }
+    .desktop {
+        display: none !important;
+    }
+    .tablet-mobile {
+        display: block !important;
+    }
+}
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .mobile {
+        display: none !important;
+    }
+    .tablet-mobile {
+        display: block !important;
+    }
+}
+/* Mobile and Tablet: width < 1024px */
+@media only screen and (max-width: 63.9375em){
+    .tablet-mobile {
+        display: block !important;
+    }
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em){
+    .mobile {
+        display: none !important;
+    }
+    .tablet-mobile {
+        display: none !important;
+    }
+}
+
+/* 
+    Common Classes List 
+    1. column classes
+    2. display classes
+    3. rounded corners classes
+    4. spacing classes
+    5. wrap items classes
+    6. flex classes
+    7. grid classes
+    8. block classes
+    9. possition classes
+    11. transition classes
+    11. devider classes
+*/
+
+
+
+// || common classes start
+
+    // || form class 
+    .invalid {
+        .form__input {
+            border: .1rem solid $error50 !important;
+        }
+        .label__place,
+        .form__message {
+            color: $error50 !important;
+        }
+    }
+
+    // || scroll with overflow classes
+    .scroll-y {
+        overflow-y: scroll !important;
+    }
+    .scroll-x {
+        overflow-x: scroll !important;
+    }
+
+    // || devider classes start
+    .light-devider {
+        background: $neutral87;
+    }
+    // || devider classes end
+
+
+
+    // || shadow classes start
+    .box-shadow1 {
+        // box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+        // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    }
+    .box-shadow2 {
+        box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    }
+    .box-shadow3 {
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+    }
+    .box-shadow4 {
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+    }
+    .box-shadow5 {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.30), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+    }
+    // || shadow classes end
+
+
+
+    // || transition classes start
+    .trans-normal {
+        transition: $trans-normal;
+    }
+    .trans-bounce {
+        transition: $trans-bounce;
+    }
+    // || transition classes end
+
+    
+
+    // || common display classes start
+    .display-block {
+        display: block !important;
+    }
+    .display-none {
+        display: none;
+    }
+    // || common display classes end
+
+
+
+    // || common rounded corners start
+    .rounded-4 {
+        border-radius: .4rem;
+    }
+    .rounded-6 {
+        border-radius: .6rem;
+    }
+    .rounded-8 {
+        border-radius: .8rem;
+    }
+    .rounded-12 {
+        border-radius: 1.2rem;
+    }
+    .rounded-100 {
+        border-radius: 10rem;
+    }
+    .rounded-half {
+        border-radius: 50%;
+    }
+    .rounded-full {
+        border-radius: 100% !important;
+    }
+    .aspect-ratio1 {
+        aspect-ratio: 1;
+    }
+    // || common rounded corners end
+
+
+
+    // || common spacing styles start
+        // margin spacing classes
+            .mi12 {
+                margin-inline: 1.2rem;
+            }
+            .mi20 {
+                margin-inline: 1.2rem;
+            }
+            .mb6 {
+                margin-bottom: .6rem;
+            }
+            .mb12 {
+                margin-bottom: 1.2rem;
+            }
+            .mb20 {
+                margin-bottom: 2rem;
+            }
+            .mb30 {
+                margin-bottom: 3rem;
+            }
+            .mb60 {
+                margin-bottom: 6rem;
+            }
+            .mt6 {
+                margin-top: .6rem;
+            }
+            .mt12 {
+                margin-top: 1.2rem;
+            }
+            .mt16 {
+                margin-top: 1.6rem;
+            }
+            .mt20 {
+                margin-top: 2rem;
+            }
+            .mt30 {
+                margin-top: 3rem;
+            }
+            .mt60 {
+                margin-top: 6rem;
+            }
+            .mt80 {
+                margin-top: clamp(3rem, -0.571rem + 9.524vw, 8rem);
+            }
+            .mt100 {
+                margin-top: 10rem;
+            }
+            .mr6 {
+                margin-right: .6rem;
+            }
+            .mr12 {
+                margin-right: 1.2rem;
+            }
+            .mr20 {
+                margin-right: 2rem;
+            }
+            .ml6 {
+                margin-left: .6rem;
+            }
+            .ml12 {
+                margin-left: 1.2rem;
+            }
+            .ml20 {
+                margin-left: 2rem;
+            }
+
+
+        // gap spacing classes
+            .g12 {
+                gap: 1.2rem;
+            }
+            .g16 {
+                gap: 1.6rem;
+            }
+            .g18 {
+                gap: 1.8rem;
+            }
+            .g2 {
+                gap: .2rem;
+            }
+            .g6 {
+                gap: 0.6rem;
+            }
+            .g8 {
+                gap: 0.8rem;
+            }
+            .g20 {
+                gap: 2rem;
+            }
+            .g30 {
+                // gap: clamp(1.6rem, 0.6rem + 2.667vw, 3rem);
+                gap: 3rem;
+            }
+            .g60 {
+                gap: 6rem;
+            }
+            .g100 {
+                gap: 10rem;
+            }
+        
+
+
+        // padding spacing classes
+            .p10 {
+                padding: 1rem !important;
+            }
+            .p12 {
+                padding: 1.2rem !important;
+            }
+            .p16 {
+                padding: 1.6rem !important;
+            }
+            .p20 {
+                padding: 2rem !important;
+            }
+            .p30 {
+                padding: 3rem !important;
+            }
+            .p60 {
+                padding: 6rem;
+            }
+            .pi12 {
+                padding-inline: 1.2rem !important;
+            }
+            .pi20 {
+                padding-inline: 2rem;
+            }
+            .pi24 {
+                padding-inline: 2.4rem;
+            }
+            .pb12 {
+                padding-block: 1.2rem;
+            }
+            .pb16 {
+                padding-block: 1.6rem;
+            }
+            .pb20 {
+                padding-block: 2rem;
+            }
+    // || common spacing styles end
+
+
+
+    // || common wrap item style start
+    .container-full {
+        width: 100%;
+    }
+    .section {
+        padding: $site-padding-block $site-padding-inline;
+    }
+    .mobile-section {
+        padding: $site-padding-block-respon $site-padding-inline-respon;
+    }
+    // || common wrap item style end
+    
+
+
+    // || common flex classes start
+    .flex {
+        display: flex;
+    }
+    .j-center {
+        justify-content: center;
+    }
+    .j-end {
+        justify-content: end;
+    }
+    .j-start {
+        justify-content: start;
+    }
+    .a-center {
+        align-items: center;
+    }
+    .a-end {
+        align-items: flex-end;
+    }
+    .a-start {
+        align-items: flex-start;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+    .h-center {
+        display: flex;
+        justify-content: center;
+    }
+    .v-center {
+        display: flex;
+        align-items: center;
+    }
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+    }  
+    .flex-around {
+        display: flex;
+        justify-content: space-around;
+    }
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-column {
+        display:flex;
+        flex-direction:column;
+    }
+    .flex-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .full {
+        width: 100%;
+    }
+    .flex-full {
+        display: flex;
+        flex-grow: 1;
+    }
+    .h-center {
+        display: flex;
+        justify-content: center;
+    }
+    .v-center {
+        display: flex;
+        align-items: center;
+    }
+    // || common flex classes end
+
+    // || common block styles classes start
+    .block { /** just a block and do nothing */
+        display: block;
+    }
+    .avt {
+        width: clamp(4rem, 3.286rem + 1.905vw, 5rem);
+        height: clamp(4rem, 3.286rem + 1.905vw, 5rem);
+        aspect-ratio: 1;
+    }
+    .img-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .banner-contain {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        border: none;
+    }
+    .banner-cover {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border: none;
+    }
+    .width-full {
+        width: 100%;
+    }
+    .cp {
+        cursor: pointer;
+    }
+    .common-banner {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .oh {
+        overflow: hidden;
+    }
+    .h-nav {
+        display: flex;
+    }
+    .v-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .ma {
+        margin: auto;
+    }
+    .mia {
+        margin-inline: auto;
+    }
+    .mba {
+        margin-block: auto;
+    }
+    // || common block styles classes end
+    
+
+
+    // || position classes start
+    .por {
+        position: relative;
+    }
+    .poa {
+        position: absolute;
+    }
+    .pof {
+        position: fixed;
+    }
+    // || position classes end
+
+
+
+    // || custom scroll bar start 
+    ::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        border-radius: 10rem;
+    }
+    // || custom scroll bar end
+    @media (min-width: 576px) {
+        .d-sm-flex{
+            display: flex;
+        }
+        .d-sm-block {
+            display: block;
+        }
+        .mt-sm-6 {
+            margin-top: .6rem;
+        }
+        .mt-sm-12 {
+            margin-top: 1.2rem;
+        }
+        .mt-sm-20 {
+            margin-top: 2rem;
+        }
+        .mt-sm-30 {
+            margin-top: 3rem;
+        }
+        .mb-sm-6 {
+            margin-top: .6rem;
+        }
+        .mb-sm-12 {
+            margin-top: 1.2rem;
+        }
+        .mb-sm-20 {
+            margin-top: 2rem;
+        }
+        .mb-sm-30 {
+            margin-top: 3rem;
+        }
+        .col-sm {
+          flex: 100% !important;
+        }
+        .col-sm-auto {
+          flex: 0 0 auto;
+          width: auto;
+        }
+        .col-sm-1 {
+          flex: 0 0 auto;
+          width: 8.33333333% !important;
+        }
+        .col-sm-2 {
+          flex: 0 0 auto;
+          width: 16.66666667% !important;
+        }
+        .col-sm-3 {
+          flex: 0 0 auto;
+          width: 25% !important;
+        }
+        .col-sm-4 {
+          flex: 0 0 auto;
+          width: 33.33333333% !important;
+        }
+        .col-sm-5 {
+          flex: 0 0 auto;
+          width: 41.66666667% !important;
+        }
+        .col-sm-6 {
+          flex: 0 0 auto;
+          width: 50% !important;
+        }
+        .col-sm-7 {
+          flex: 0 0 auto;
+          width: 58.33333333% !important;
+        }
+        .col-sm-8 {
+          flex: 0 0 auto;
+          width: 66.66666667% !important;
+        }
+        .col-sm-9 {
+          flex: 0 0 auto;
+          width: 75% !important;
+        }
+        .col-sm-10 {
+          flex: 0 0 auto;
+          width: 83.33333333% !important;
+        }
+        .col-sm-11 {
+          flex: 0 0 auto;
+          width: 91.66666667% !important;
+        }
+        .col-sm-12 {
+          flex: 0 0 auto;
+          width: 100% !important;
+        }
+      }
+      @media (min-width: 768px) {
+        .d-md-block {
+            display: block;
+        }
+        .d-md-flex{
+            display: flex;
+        }
+        .mt-md-6 {
+            margin-top: .6rem;
+        }
+        .mt-md-12 {
+            margin-top: 1.2rem;
+        }
+        .mt-md-20 {
+            margin-top: 2rem;
+        }
+        .mt-md-30 {
+            margin-top: 3rem;
+        }
+        .mb-md-6 {
+            margin-top: .6rem;
+        }
+        .mb-md-12 {
+            margin-top: 1.2rem;
+        }
+        .mb-md-20 {
+            margin-top: 2rem;
+        }
+        .mb-md-30 {
+            margin-top: 3rem;
+        }
+        .col-md {
+          flex: 1 0 0% !important;
+        }
+        .col-md-auto {
+          flex: 0 0 auto;
+          width: auto;
+        }
+        .col-md-1 {
+          flex: 0 0 auto;
+          width: 8.33333333% !important;
+        }
+        .col-md-2 {
+          flex: 0 0 auto;
+          width: 16.66666667% !important;
+        }
+        .col-md-3 {
+          flex: 0 0 auto;
+          width: 25% !important;
+        }
+        .col-md-4 {
+          flex: 0 0 auto;
+          width: 33.33333333% !important;
+        }
+        .col-md-5 {
+          flex: 0 0 auto;
+          width: 41.66666667% !important;
+        }
+        .col-md-6 {
+          flex: 0 0 auto;
+          width: 50% !important;
+        }
+        .col-md-7 {
+          flex: 0 0 auto;
+          width: 58.33333333% !important;
+        }
+        .col-md-8 {
+          flex: 0 0 auto;
+          width: 66.66666667% !important;
+        }
+        .col-md-9 {
+          flex: 0 0 auto;
+          width: 75% !important;
+        }
+        .col-md-10 {
+          flex: 0 0 auto;
+          width: 83.33333333% !important;
+        }
+        .col-md-11 {
+          flex: 0 0 auto;
+          width: 91.66666667% !important;
+        }
+        .col-md-12 {
+          flex: 0 0 auto;
+          width: 100% !important;
+        }
+      }
+      @media (min-width: 992px) {
+        .d-lg-block {
+            display: block;
+        }
+        .d-lg-flex{
+            display: flex;
+        }
+        .row-lg {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .mt-lg-6 {
+            margin-top: .6rem;
+        }
+        .mt-lg-12 {
+            margin-top: 1.2rem;
+        }
+        .mt-lg-20 {
+            margin-top: 2rem;
+        }
+        .mt-lg-30 {
+            margin-top: 3rem;
+        }
+        .mb-lg-6 {
+            margin-top: .6rem;
+        }
+        .mb-lg-12 {
+            margin-top: 1.2rem;
+        }
+        .mb-lg-20 {
+            margin-top: 2rem;
+        }
+        .mb-lg-30 {
+            margin-top: 3rem;
+        }
+        .col-lg {
+          flex: 1 0 0% !important;
+        }
+        .col-lg-auto {
+          flex: 0 0 auto;
+          width: auto;
+        }
+        .col-lg-1 {
+          flex: 0 0 auto;
+          width: 8.33333333% !important;
+        }
+        .col-lg-2 {
+          flex: 0 0 auto;
+          width: 16.66666667% !important;
+        }
+        .col-lg-3 {
+          flex: 0 0 auto;
+          width: 25% !important;
+        }
+        .col-lg-4 {
+          flex: 0 0 auto;
+          width: 33.33333333% !important;
+        }
+        .col-lg-5 {
+          flex: 0 0 auto;
+          width: 41.66666667% !important;
+        }
+        .col-lg-6 {
+          flex: 0 0 auto;
+          width: 50% !important;
+        }
+        .col-lg-7 {
+          flex: 0 0 auto;
+          width: 58.33333333% !important;
+        }
+        .col-lg-8 {
+          flex: 0 0 auto;
+          width: 66.66666667% !important;
+        }
+        .col-lg-9 {
+          flex: 0 0 auto;
+          width: 75% !important;
+        }
+        .col-lg-10 {
+          flex: 0 0 auto;
+          width: 83.33333333% !important;
+        }
+        .col-lg-11 {
+          flex: 0 0 auto;
+          width: 91.66666667% !important;
+        }
+        .col-lg-12 {
+          flex: 0 0 auto;
+          width: 100% !important;
+        }
+      }
+      @media (min-width: 1200px) {
+        .d-xl-block {
+            display: block;
+        }
+        .d-xl-flex{
+            display: flex;
+        }
+        .mt-xl-6 {
+            margin-top: .6rem;
+        }
+        .mt-xl-12 {
+            margin-top: 1.2rem;
+        }
+        .mt-xl-20 {
+            margin-top: 2rem;
+        }
+        .mt-xl-30 {
+            margin-top: 3rem;
+        }
+        .mb-xl-6 {
+            margin-top: .6rem;
+        }
+        .mb-xl-12 {
+            margin-top: 1.2rem;
+        }
+        .mb-xl-20 {
+            margin-top: 2rem;
+        }
+        .mb-xl-30 {
+            margin-top: 3rem;
+        }
+        .col-xl {
+          flex: 1 0 0% !important;
+        }
+        .col-xl-auto {
+          flex: 0 0 auto;
+          width: auto;
+        }
+        .col-xl-1 {
+          flex: 0 0 auto;
+          width: 8.33333333% !important;
+        }
+        .col-xl-2 {
+          flex: 0 0 auto;
+          width: 16.66666667% !important;
+        }
+        .col-xl-3 {
+          flex: 0 0 auto;
+          width: 25% !important;
+        }
+        .col-xl-4 {
+          flex: 0 0 auto;
+          width: 33.33333333% !important;
+        }
+        .col-xl-5 {
+          flex: 0 0 auto;
+          width: 41.66666667% !important;
+        }
+        .col-xl-6 {
+          flex: 0 0 auto;
+          width: 50% !important;
+        }
+        .col-xl-7 {
+          flex: 0 0 auto;
+          width: 58.33333333% !important;
+        }
+        .col-xl-8 {
+          flex: 0 0 auto;
+          width: 66.66666667% !important;
+        }
+        .col-xl-9 {
+          flex: 0 0 auto;
+          width: 75% !important;
+        }
+        .col-xl-10 {
+          flex: 0 0 auto;
+          width: 83.33333333% !important;
+        }
+        .col-xl-11 {
+          flex: 0 0 auto;
+          width: 91.66666667% !important;
+        }
+        .col-xl-12 {
+          flex: 0 0 auto;
+          width: 100% !important;
+        }
+      }
+      @media (min-width: 1400px) {
+        .d-xxl-block {
+            display: block;
+        }
+        .d-xxl-flex{
+            display: flex;
+        }
+        .mt-xxl-6 {
+            margin-top: .6rem;
+        }
+        .mt-xxl-12 {
+            margin-top: 1.2rem;
+        }
+        .mt-xxl-20 {
+            margin-top: 2rem;
+        }
+        .mt-xxl-30 {
+            margin-top: 3rem;
+        }
+        .mb-xxl-6 {
+            margin-top: .6rem;
+        }
+        .mb-xxl-12 {
+            margin-top: 1.2rem;
+        }
+        .mb-xxl-20 {
+            margin-top: 2rem;
+        }
+        .mb-xxl-30 {
+            margin-top: 3rem;
+        }
+        .col-xxl {
+          flex: 1 0 0% !important;
+        }
+        .col-xxl-auto {
+          flex: 0 0 auto;
+          width: auto;
+        }
+        .col-xxl-1 {
+          flex: 0 0 auto;
+          width: 8.33333333% !important;
+        }
+        .col-xxl-2 {
+          flex: 0 0 auto;
+          width: 16.66666667% !important;
+        }
+        .col-xxl-3 {
+          flex: 0 0 auto;
+          width: 25% !important;
+        }
+        .col-xxl-4 {
+          flex: 0 0 auto;
+          width: 33.33333333% !important;
+        }
+        .col-xxl-5 {
+          flex: 0 0 auto;
+          width: 41.66666667% !important;
+        }
+        .col-xxl-6 {
+          flex: 0 0 auto;
+          width: 50% !important;
+        }
+        .col-xxl-7 {
+          flex: 0 0 auto;
+          width: 58.33333333% !important;
+        }
+        .col-xxl-8 {
+          flex: 0 0 auto;
+          width: 66.66666667% !important;
+        }
+        .col-xxl-9 {
+          flex: 0 0 auto;
+          width: 75% !important;
+        }
+        .col-xxl-10 {
+          flex: 0 0 auto;
+          width: 83.33333333% !important;
+        }
+        .col-xxl-11 {
+          flex: 0 0 auto;
+          width: 91.66666667%;
+        }
+        .col-xxl-12 {
+          flex: 0 0 auto;
+          width: 100%;
+        }
+      
+      }
+// || common classes end
+
+
+
