@@ -5,9 +5,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "run sass",
+            "label": "todo app - run sass",
             "type": "shell",
-            "command": "sass",
+            "command": "C:/Users/hoanggiang/AppData/Roaming/npm/sass.cmd",
             "args": [
                 "resources/sass/main.scss",
                 "resources/sass/css/app.css",

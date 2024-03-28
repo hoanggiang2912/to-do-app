@@ -4,27 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do App</title>
-    <link rel="shortcut icon" href="/assets/img/to-do-favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/to-do-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="resources/sass/css/app.css">
 </head>
-<body>
-    <div class="container">
-        <div class="todo-list" style="max-width: 600px; margin: auto; transform: translateY(100px)">
-            <h1 class="title headline-large fw-bold">To-Do List</h1>
-            <form class="add-task flex flex-between mb20">
-                <input type="text" class="new-task" placeholder="Add a new task">
-                <button type="submit" class="add-btn fw-smb pi12 rounded-100">Add</button>
-            </form>
-            <span class="form__message"></span>
-            <div class="flex flex-between">
-                <h1 class="title headline-medium fw-bold">Task List</h1>
-                <button class="clear-btn fw-smb pi12 rounded-100">Clear task</button>
+<body class="por">
+    <div class="container p20 por" style="min-height: 100vh;">
+        <div class="todo-list grid wide" style="margin: auto; transform: translateY(100px)">
+            <div class="row">
+                <div class="col l-8 m-6 c-12">
+                    <div class="block">
+                        <h1 class="title headline-large fw-bold">To-Do App</h1>
+                        <form class="add-task-form flex-column flex-between mt20 mb20 p12">
+                            <div class="form__group mb20">
+                                <h4 class="title-medium fw-bold">Task name</h4>
+                                <input type="text" class="form__input new-task" placeholder="Add a new task">
+                                <span class="form__message"></span>
+                            </div>
+                            <div class="form__group mb20">
+                                <h4 class="title-medium fw-bold">Manager</h4>
+                                <input type="text" class="form__input manager" placeholder="Manager">
+                                <span class="form__message"></span>
+                            </div>
+                            <div class="form__group mb20">
+                                <h4 class="title-medium fw-bold">Assign</h4>
+                                <input type="text" class="form__input assign" placeholder="Assign">
+                                <span class="form__message"></span>
+                            </div>
+                            <div class="form__group mb20">
+                                <h4 class="title-medium fw-bold">Status</h4>
+                                <select name="status" required id="status" class="form__input status">
+                                    <option value="pending">Pending</option>
+                                    <option value="doing">Doing</option>
+                                    <option value="done">Done</option>
+                                </select>
+                            </div>
+                            <div class="flex j-end">
+                                <button type="submit" class="add-btn btn fw-smb pi12 pb12 rounded-100">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col l-4 m-6 c-12">
+                    <div class="block">
+                        <div class="flex flex-between g12">
+                            <h1 class="title headline-medium fw-bold">Task List</h1>
+                            <div class="flex g20 j-end">
+                                <button class="clear-btn btn fw-smb pi12 rounded-100 pb12">Clear task</button>
+                                <button class="sort-btn btn fw-smb pi12 rounded-100 pb12 v-center por g6">
+                                    <i class="fas fa-filter"></i> Sort
+                                    <ul class="sort-list poa rounded-8 box-shadow1 oh">
+                                        <li class="sort-list__item" data-sort="id">
+                                            <a href="#" class="sort-list__link">Sort by id</a>
+                                        </li>
+                                        <li class="sort-list__item" data-sort="name">
+                                            <a href="#" class="sort-list__link">Sort by name</a>
+                                        </li>
+                                        <li class="sort-list__item" data-sort="status">
+                                            <a href="#" class="sort-list__link">Sort by status</a>
+                                        </li>
+                                        <li class="sort-list__item" data-sort="manager">
+                                            <a href="#" class="sort-list__link">Sort by manager</a>
+                                        </li>
+                                    </ul>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="grid" style="list-style: none; padding: 0;">
+                            <div class="row tasks" style="max-height: 60vh; overflow-y: scroll;">
+                                <!-- Task items will be added here -->
+                                <!-- single task start -->
+                                <!-- <div class="task-item rounded-8 flex-between pi20 pb12 v-center width-full">
+                                    <div class="task__name title-medium fw-smb">task name</div>
+                                    <button class="icon-btn"><i class="fa fa-times"></i></button>
+                                </div> -->
+                                <!-- single task end -->
+                            </div>
+                            <div class="row task-box-wrapper mt30">
+                    
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <ul class="tasks" style="list-style: none; padding: 0;">
-                <!-- Task items will be added here -->
-            </ul>
+        </div>  
+
+        <!-- Modal -->
+        <div class="task-info__wrapper abs-center rounded-12 oh">
+            <div class="task-info__inner p20">
+                <form action="" class="form edit-task-form width-full">
+                    <div class="form__group">
+                        <h4 class="title-medium fw-bold">Task name</h4>
+                        <input type="text" class="form__input edit-task-name__input" value="Task name">
+                        <span class="form__message"></span>
+                    </div>
+                    <div class="form__group">
+                        <h4 class="title-medium fw-bold">Manager</h4>
+                        <input type="text" class="form__input edit-task-manager__input" value="Manager">
+                        <span class="form__message"></span>
+                    </div>
+                    <div class="form__group">
+                        <h4 class="title-medium fw-bold">Assign</h4>
+                        <input type="text" class="form__input edit-task-assign__input" value="Assign">
+                        <span class="form__message"></span>
+                    </div>
+                    <div class="form__group">
+                        <h4 class="title-medium fw-bold">Status</h4>
+                        <select name="status" id="taskInfoStatus" required class="form__input form__input--select edit-task-status__input">
+                            <option value="pending">Pending</option>
+                            <option value="doing">Doing</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group form__btns flex g20 j-end width-full">
+                        <button class="btn pi12 pb12 rounded-100 fw-bold discard-btn">Discard</button>
+                        <button class="btn pi12 pb12 rounded-100 fw-bold save-btn">Save</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        <div class="overlay fixed-full"></div>
     </div>
 </body>
 </html>
